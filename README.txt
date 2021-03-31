@@ -1,11 +1,4 @@
 Kevin Tivert
-student ID:#001372496
-B.S Computer Science
-Asa Waterstraut
-(980) 270-6118
-Central Time
-Feb 11, 2021
-
 Application Title: SchedulerApp
 
 PURPOSE:

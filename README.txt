@@ -23,7 +23,7 @@ IDE:
 
 How to Run Application :
 Main Method ->src/Main.java
-Build and Run application in IDE.
+Build and Run application in IDE of your choice.
 
 *** UserName = Admin_Test
 *** Password = PassWord

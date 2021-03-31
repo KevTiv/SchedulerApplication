@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainScreenController">
+    <children>
+        <VBox layoutX="14.0" layoutY="67.0" prefHeight="402.0" prefWidth="1963.0">
+            <children>
+                <HBox prefHeight="33.0" prefWidth="1804.0">
+                    <children>
+                        <Label fx:id="customerLabel" prefHeight="20.0" prefWidth="965.0" text="All Customers">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="appointmentLabel" prefHeight="20.0" prefWidth="201.0" text="All Customer Appointments">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <HBox>
+                            <children>
+                                <ComboBox fx:id="monthWeekComboBox" prefHeight="25.0" prefWidth="147.0">
+                                    <HBox.margin>
+                                        <Insets right="5.0" />
+                                    </HBox.margin>
+                                </ComboBox>
+                                <RadioButton fx:id="monthRadio" mnemonicParsing="false" selected="true" text="ScreenView By Month" />
+                                <RadioButton fx:id="weekRadio" mnemonicParsing="false" prefHeight="17.0" prefWidth="288.0" text="ScreenView By Week" />
+                            </children>
+                        </HBox>
+                        <Label fx:id="yearLabel" prefHeight="28.0" prefWidth="82.0" text="2020">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="previousYear" mnemonicParsing="false" text="Previous" />
+                        <Button fx:id="nextYear" mnemonicParsing="false" text="Next">
+                            <HBox.margin>
+                                <Insets left="5.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+                <HBox prefHeight="339.0" prefWidth="2424.0">
+                    <children>
+                        <TableView fx:id="allCustomersList" editable="true" prefHeight="304.0" prefWidth="956.0">
+                            <columns>
+                                <TableColumn fx:id="allCustomersCustomerIDColumn" prefWidth="75.0" text="Customer ID" />
+                                <TableColumn fx:id="allCustomersName" prefWidth="114.0" text="Name" />
+                                <TableColumn fx:id="allCustomersAddress" prefWidth="136.0" text="Address" />
+                                <TableColumn fx:id="allCustomersPostalCode" prefWidth="81.0" text="Zip" />
+                                <TableColumn fx:id="allCustomersPhone" prefWidth="98.0" text="Phone" />
+                                <TableColumn fx:id="allCustomersCreateDate" prefWidth="77.0" text="Create Date" />
+                                <TableColumn fx:id="allCustomersCreatedBy" prefWidth="106.0" text="Created By" />
+                                <TableColumn fx:id="allCustomersLastUpdate" prefWidth="74.0" text="Last Update" />
+                                <TableColumn fx:id="allCustomersLastUpdatedBy" prefWidth="102.0" text="Last Updated By" />
+                                <TableColumn fx:id="allCustomersDivision" prefWidth="92.0" text="Division" />
+                            </columns>
+                            <HBox.margin>
+                                <Insets right="10.0" />
+                            </HBox.margin>
+                        </TableView>
+                        <VBox>
+                            <children>
+                                <TableView fx:id="customerAppointments" prefHeight="448.0" prefWidth="974.0">
+                                    <columns>
+                                        <TableColumn fx:id="appointmentIDColumn" prefWidth="68.0" text="Appointment ID" />
+                                        <TableColumn fx:id="titleColumn" prefWidth="98.0" text="Title" />
+                                        <TableColumn fx:id="descriptionColumn" prefWidth="79.0" text="Description" />
+                                        <TableColumn fx:id="locationColumn" prefWidth="101.0" text="Location" />
+                                        <TableColumn fx:id="typeColumn" prefWidth="58.0" text="Type" />
+                                        <TableColumn fx:id="startColumn" prefWidth="58.0" text="Start" />
+                                        <TableColumn fx:id="endColumn" prefWidth="81.0" text="End" />
+                                        <TableColumn fx:id="createDateColumn" prefWidth="70.0" text="Create Date" />
+                                        <TableColumn fx:id="createdByColumn" prefWidth="78.0" text="Created By" />
+                                        <TableColumn fx:id="lastUpdateColumn" prefWidth="79.0" text="Last Update" />
+                                        <TableColumn fx:id="lastUpdatedByColumn" prefWidth="101.0" text="Last Updated By" />
+                                        <TableColumn fx:id="customerIDColumn" prefWidth="47.0" text="Customer ID" />
+                                        <TableColumn fx:id="userColumn" prefWidth="57.0" text="User" />
+                                        <TableColumn fx:id="contactColumn" prefWidth="75.0" text="Contact" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox>
+                    <children>
+                  <Label prefHeight="17.0" prefWidth="542.0" text=" Select a report option  (BELOW)                                                           Select a customer or appointment option ==&gt;" />
+                        <Button fx:id="newCustomer" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="New Customer">
+                            <HBox.margin>
+                                <Insets right="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="editCustomer" mnemonicParsing="false" prefWidth="150.0" text="Edit Customer">
+                            <HBox.margin>
+                                <Insets right="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="deleteCustomer" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Delete Customer">
+                            <HBox.margin>
+                                <Insets right="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="newAppointment" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="New Appointment">
+                            <HBox.margin>
+                                <Insets right="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="editAppointment" mnemonicParsing="false" prefWidth="150.0" text="Edit Appointment">
+                            <HBox.margin>
+                                <Insets right="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="deleteAppointment" mnemonicParsing="false" prefWidth="150.0" text="Delete Appointment">
+                            <HBox.margin>
+                                <Insets right="575.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="5.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+        <Button fx:id="customerReport" layoutX="14.0" layoutY="475.0" mnemonicParsing="false" text="Customer Total Report" AnchorPane.topAnchor="475.0" />
+        <Button fx:id="contactReport" layoutX="150.0" layoutY="475.0" mnemonicParsing="false" text="Contact Schedule Report" AnchorPane.leftAnchor="155.0" />
+        <Button fx:id="userReport" layoutX="303.0" layoutY="475.0" mnemonicParsing="false" text="User Schedule Report" AnchorPane.leftAnchor="308.0" />
+        <TextArea fx:id="userInterfaceMessages" editable="false" layoutX="473.0" layoutY="475.0" prefHeight="156.0" prefWidth="468.0" />
+        <Button fx:id="exit" layoutX="1882.0" layoutY="553.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" text="Exit" />
+      <Label layoutX="883.0" layoutY="31.0" text="MAIN SCREEN">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

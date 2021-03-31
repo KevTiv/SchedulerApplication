@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controller.AddCustomerScreenController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <HBox layoutX="200.0" layoutY="150.0" prefHeight="271.0" prefWidth="907.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox prefHeight="304.0" prefWidth="595.0">
+                    <children>
+                        <Label fx:id="addCustomerLabel" prefHeight="42.0" prefWidth="246.0" text="Add Customer Screen">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <GridPane prefHeight="241.0" prefWidth="595.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="334.0" minWidth="250.0" prefWidth="298.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="250.0" prefWidth="297.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <VBox>
+                                    <children>
+                                        <Label fx:id="nameLabel" text="Name" />
+                                        <TextField fx:id="nameText" />
+                                    </children>
+                                </VBox>
+                                <VBox GridPane.rowIndex="1">
+                                    <children>
+                                        <Label fx:id="phoneLabel" text="Phone" />
+                                        <TextField fx:id="phoneText" />
+                                    </children>
+                                </VBox>
+                                <VBox GridPane.columnIndex="1">
+                                    <children>
+                                        <Label fx:id="addressLabel" text="Address" />
+                                        <TextField fx:id="addressText" />
+                                    </children>
+                                </VBox>
+                                <VBox prefHeight="48.0" prefWidth="129.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <children>
+                                        <Label fx:id="zipLabel" text="Zip" />
+                                        <TextField fx:id="zipText" />
+                                    </children>
+                                </VBox>
+                                <VBox prefHeight="66.0" prefWidth="298.0" GridPane.rowIndex="2">
+                                    <children>
+                                        <Label fx:id="countryLabel" text="Country" />
+                                        <ComboBox fx:id="countryComboBox" editable="true" prefWidth="150.0" />
+                                    </children>
+                                </VBox>
+                                <VBox GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <children>
+                                        <Label fx:id="stateProvinceLabel" text="State/Province" />
+                                        <ComboBox fx:id="stateProvinceComboBox" editable="true" prefWidth="150.0" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </GridPane>
+                        <HBox prefHeight="33.0" prefWidth="595.0">
+                            <children>
+                                <Label prefHeight="17.0" prefWidth="479.0" />
+                                <Button fx:id="saveCustomer" mnemonicParsing="false" text="Save">
+                                    <HBox.margin>
+                                        <Insets left="5.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button fx:id="cancelChanges" mnemonicParsing="false" text="Cancel">
+                                    <HBox.margin>
+                                        <Insets left="5.0" />
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+            <padding>
+                <Insets left="5.0" />
+            </padding>
+        </HBox>
+    </children>
+
+</AnchorPane>

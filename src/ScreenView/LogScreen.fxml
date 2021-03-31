@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controller.LogScreenController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <VBox layoutX="5.0" layoutY="-60.0" prefHeight="225.0" prefWidth="333.0" AnchorPane.bottomAnchor="153.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label text="Log Screen">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <Label fx:id="usernameLabel" text="Username">
+                    <padding>
+                        <Insets bottom="10.0" left="5.0" top="5.0" />
+                    </padding>
+                </Label>
+                <TextField fx:id="username" prefHeight="27.0" prefWidth="312.0" />
+                <Label fx:id="passwordLabel" text="Password">
+                    <padding>
+                        <Insets bottom="10.0" left="5.0" top="5.0" />
+                    </padding>
+                </Label>
+                <PasswordField fx:id="password" prefHeight="25.0" prefWidth="85.0" />
+                <HBox>
+                    <VBox.margin>
+                        <Insets top="5.0" />
+                    </VBox.margin>
+                    <children>
+                        <Button fx:id="login" mnemonicParsing="false" text="Sign In" />
+                        <Label fx:id="errorMessage" alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="191.0" textFill="RED" />
+                    </children>
+                </HBox>
+                <Label fx:id="location" alignment="BOTTOM_LEFT" prefHeight="37.0" prefWidth="200.0" text="United States of America">
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                </Label>
+            </children>
+        </VBox>
+    </children>
+
+</AnchorPane>
